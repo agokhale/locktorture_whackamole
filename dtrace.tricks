@@ -1,0 +1,2 @@
+dtrace -n '::nlm*:return {@nlmret[arg0,probefunc] = count() }' 
+dtrace -n 'nfscl:::start {@nfscl[probefunc] = count()}'
